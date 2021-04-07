@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syndi BETA - Dashboard</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+
+<body>
+    <section>
+        <div class="relative bg-white overflow-hidden">
+            <div class="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
+            </div>
+            <div class="relative pt-6 pb-12 sm:pb-14 lg:pb-16">
+                <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+                    aria-label="Global">
+                    <div class="flex items-center flex-1">
+                        <div class="flex items-center justify-between w-full md:w-auto">
+                            <a href="#">
+                                <span class="sr-only">Workflow</span>
+                                <img class="h-8 w-auto sm:h-10" src="img/Syndi.png" alt="Syndi Logo">
+                            </a>
+                            <div class="-mr-2 flex items-center md:hidden">
+                                <button type="button"
+                                    class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                                    id="main-menu" aria-haspopup="true">
+                                    <span class="sr-only">Open main menu</span>
+                                    <!-- Heroicon name: hamburger/menu -->
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:ml-10 md:space-x-10">
+                            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Update Reminders</a>
+
+                            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Emmergency Support</a>
+
+                            <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Contact Us</a>
+
+                            <!-- <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a> -->
+                        </div>
+                    </div>
+                    <!-- <div class="hidden md:block text-right">
+                        <span class="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
+                            <a href="https://dev.syndi.cloud/"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-50">
+                               Menu
+                            </a>
+                        </span>
+                    </div> -->
+                </nav>
+
+
+                <div class="fixed top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden ">
+                    <div id="dropdown"
+                        class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden hidden">
+                        <div class="px-5 pt-4 flex items-center justify-between">
+                            <div>
+                                <img class="h-8 w-auto" src="img/Syndi.png" alt="Syndi Logo">
+                            </div>
+                            <div class="-mr-2">
+                                <button id="closenav" type="button"
+                                    class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                                    <span class="sr-only">Close main menu</span>
+                                    <!-- Heroicon name: outline/x -->
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+                            <div class="px-2 pt-2 pb-3 space-y-1" role="none">
+                                <div>
+                                    <div class="inline-flex">
+                                        <div class="pt-2 pl-4">
+                                            <span class="sr-only">Reminders</span>
+                                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                          <path d="M13 12v-5h-1.999v6.999h5.999v-1.999h-4zm-12.197-4.285c-1.261-1.944-1.035-4.569.675-6.266 1.7-1.687 4.305-1.896 6.235-.645-3.171 1.219-5.692 3.741-6.91 6.911zm18.428 11.18c1.715-1.794 2.771-4.219 2.771-6.896 0-5.522-4.477-10-10.002-10-5.522 0-10 4.477-10 10 0 2.678 1.059 5.104 2.772 6.898l-1.736 4.506c-.159.394.288.759.643.522l3.581-3.122c1.412.761 3.026 1.195 4.742 1.195 1.717 0 3.334-.434 4.744-1.195l3.582 3.122c.355.237.803-.128.643-.522l-1.74-4.508zm-7.23 1.103c-4.412 0-8.001-3.588-8.001-8s3.589-8 8.001-8c4.412 0 8.002 3.588 8.002 8s-3.59 8-8.002 8zm10.553-18.52c-1.697-1.71-4.324-1.937-6.268-.675 3.17 1.218 5.693 3.739 6.912 6.91 1.25-1.931 1.041-4.535-.644-6.235z" />
+                                        </svg>
+                                        </div>
+                                        <a href="#"
+                                            class="block px-3 py-2 rounded-md text-base font-medium  hover:text-gray-900 hover:bg-gray-50"
+                                            role="menuitem">Update Reminders</a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="inline-flex">
+                                        <div class="pt-2 pl-4">
+                                            <span class="sr-only">Emmergency Support</span>
+                                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                          <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.31 7.526c-.099-.807.528-1.526 1.348-1.526.771 0 1.377.676 1.28 1.451l-.757 6.053c-.035.283-.276.496-.561.496s-.526-.213-.562-.496l-.748-5.978zm1.31 10.724c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" />
+                                        </svg>
+                                        </div>
+                                        <a href="#"
+                                            class="block px-3 py-2 rounded-md text-base font-medium  hover:text-gray-900 hover:bg-gray-50"
+                                            role="menuitem">Emmergency Support</a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="inline-flex">
+                                        <div class="pt-2 pl-4">
+                                            <span class="sr-only">Contact</span>
+                                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                          <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                                        </svg>
+                                        </div>
+                                        <a href="#"
+                                            class="block px-3 py-2 rounded-md text-base font-medium  hover:text-gray-900 hover:bg-gray-50"
+                                            role="menuitem">Contact Us</a>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" role="menuitem">Company</a> -->
+                            </div>
+                            <div role="none">
+                                <a href="#"
+                                    class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-50 hover:bg-gray-100"
+                                    role="menuitem">
+                                    Log Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end of nav -->
+                <!-- end of nav -->
+                <!-- end of nav -->
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        // Navbar Dropdown Mobile Menu 
+
+        document.getElementById("main-menu").addEventListener("click", myFunction);
+
+        function myFunction() {
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.classList.add('hidden');
+            }
+        }
+
+        document.getElementById("closenav").addEventListener("click", myFunctionClose);
+
+        function myFunctionClose() {
+
+            dropdown.classList.add('hidden');
+
+        }
+    </script>
+</body>
+
+</html>
