@@ -7,29 +7,16 @@
     <title>Syndi - Login</title>
     <link rel="stylesheet" href="public/styles.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png"/>
+
 
 </head>
 <body>
     <section>
-        <!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ]
-  }
-  ```
--->
+   
 <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
-        <a href="index.html">
+        <a href="home.html">
             <img class="mx-auto h-12 w-auto" src="img/Syndi.png" alt="Workflow">
         </a>
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -51,7 +38,7 @@
               Email address
             </label>
             <div class="mt-1">
-              <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+              <input name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
             </div>
           </div>
   
@@ -60,7 +47,7 @@
               Password
             </label>
             <div class="mt-1">
-              <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+              <input name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
             </div>
           </div>
   
@@ -72,21 +59,20 @@
               </label>
             </div>
   
-            <div class="text-sm">
+            <!-- <div class="text-sm">
               <a href="#" class="font-medium text-green-600 hover:text-green-500">
                 Forgot your password?
               </a>
-            </div>
+            </div> -->
           </div>
   
           <div>
-            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+            <button onclick="myFunction()" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
               Sign in
             </button>
           </div>
         </form>
-  
-        <div class="mt-6">
+        <!-- <div class="mt-6">
           <div class="relative">
             <div class="absolute inset-0 flex items-center">
               <div class="w-full border-t border-gray-300"></div>
@@ -126,11 +112,19 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   
     </section>
+    <script>
+      
+      function myFunction() {
+  alert("User Does Not Exist");
+}
+    </script>
 </body>
+
+
 </html>

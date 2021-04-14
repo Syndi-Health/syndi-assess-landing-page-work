@@ -2303,7 +2303,7 @@ video {
 
 .bg-green-600 {
   --tw-bg-opacity: 1;
-  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  background-color: rgba(84, 205, 137, var(--tw-bg-opacity));
 }
 
 .bg-green-700 {
@@ -24367,7 +24367,7 @@ video {
 
 .text-green-600 {
   --tw-text-opacity: 1;
-  color: rgba(5, 150, 105, var(--tw-text-opacity));
+  color: rgba(84, 205, 137, var(--tw-text-opacity));
 }
 
 .text-green-700 {
@@ -94025,7 +94025,7 @@ video {
 
   .lg\:bg-green-600 {
     --tw-bg-opacity: 1;
-    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+    background-color: rgba(84, 205, 137, var(--tw-bg-opacity));
   }
 
   .lg\:bg-green-700 {

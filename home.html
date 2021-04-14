@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syndi - University Student Mental Health</title>
+  <link rel="stylesheet" href="public/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/favicon.png"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <meta property="og:url" content="https://syndi.university/home.html"/>
+  <meta property=”og:type” content=”website”/>
+  <meta property="og:title" content="University Student Mental Health"/>
+  <meta property="og:description" content="University mental health and wellbeing platform that supports student services in creating a healthy and motivating studying environment for their students."/>
+  <meta property="og:image" content="https://syndi.university/img/meta.png"/>
+  <meta property="og:site_name" content="Syndi Health"/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+</head>
+
+<section>
+  <div class="relative bg-white overflow-hidden">
+    <div class="sticky hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
+      <!-- <svg class="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8" width="640" height="784" fill="none"
+        viewBox="0 0 640 784"> -->
+        <defs>
+          <pattern id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047" x="118" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect y="72" width="640" height="640" class="text-gray-50" fill="currentColor" />
+        <rect x="118" width="404" height="784" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" />
+      </svg>
+    </div>
+    <div class="relative pb-6 sm:pb-12 lg:pb-18">
+      <nav class=" py-4 relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+        <div class=" flex items-center flex-1">
+          <div class="flex items-center justify-between w-full md:w-auto">
+            <a href="home.html">
+              <span class="sr-only">Syndi</span>
+              <img class="h-8 w-auto sm:h-10" src="img/Syndi.png" alt="">
+            </a>
+            <div class="-mr-2 flex items-center md:hidden">
+              <button id="main-menu" type="button"
+                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!-- Heroicon name: outline/menu -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="hidden md:block md:ml-10 md:space-x-10">
+            <a href="#platform" class="font-medium text-gray-500 hover:text-gray-900">Platform</a>
+
+            <a href="#features" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
+
+            <a href="#pricing" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+
+            <!-- <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a> -->
+          </div>
+        </div>
+        <div class="hidden md:block text-right">
+          <span class="mr-2 inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
+            <a href="login.html"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-50">
+              Login
+            </a>
+          </span>
+          <span class="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
+            <a href="booking.html"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-gray-50 hover:text-green-600">
+              Book a demo
+            </a>
+          </span>
+        </div>
+      </nav>
+
+      <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div id="dropdown"
+          class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-8 w-auto" src="img/Syndi.png" alt="">
+            </div>
+            <div class="-mr-2">
+              <button id="closenav" type="button"
+                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                <span class="sr-only">Close main menu</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#platform"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Platform</a>
+            <a href="#features"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+            <a href="#pricing"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Pricing</a>
+            <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a> -->
+          </div>
+          <a href="login.html"
+            class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-50 hover:bg-gray-100">
+            Login
+          </a>
+          <a href="booking.html"
+            class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-50 hover:bg-gray-100">
+            Book a Demo
+          </a>
+        </div>
+      </div>
+
+      <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+          <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            <h1>
+              <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+                <span class="block text-gray-900">The right health support,</span>
+                <span class="block text-green-600">at the right time</span>
+              </span>
+            </h1>
+            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+              Mental health assessment and signposting platform for the workplace
+            </p>
+          </div>
+          <div
+            class="video  relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <svg
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
+              width="640" height="784" fill="none" viewBox="0 0 640 784" aria-hidden="true">
+              <defs>
+                <pattern id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e" x="118" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+            </svg>
+            <div class="w-full relative homepic" style="margin-top: -2rem;">
+              <img src="img/SyndiHome.png" alt="">
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="bg-gray-50 pt-12 sm:pt-16" id="platform">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          The assessment and support navigation platform for employee mental health and wellness. 
+        </h2>
+        <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+          Carry out scientific and digital psychological risk assessments with us and find tailor-made solutions from leading providers via our recommendation platform.         </p>
+      </div>
+    </div>
+    <div class="pt-8 video justify-center relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+      <div class="relative">
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/IvwYChfEUGQ??rel=0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <button type="button"
+          class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+        </button>
+      </div>
+    </div>
+    <div class="mt-10 bg-white sm:pb-8 ">
+      <div class="relative four-boxes">
+        <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto">
+            <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4">
+              <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+                <dd class="order-1 text-2xl font-extrabold text-green-600">
+                  Clinical
+                </dd>
+              </div>
+              <div
+                class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                <dd class="order-1 text-2xl font-extrabold text-green-600">
+                  Digital
+                </dd>
+              </div>
+              <div
+                class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                <dd class="order-1 text-2xl font-extrabold text-green-600">
+                  Personalised
+                </dd>
+              </div>
+              <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+                <dd class="order-1 text-2xl font-extrabold text-green-600">
+                  Accessible
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="relative bg-white pt-8 pb-6 overflow-hidden">
+    <div class="mt-24">
+      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2 ">
+          <div>
+            <div class="">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 animation-element slide-right">
+                Bringing structure and data to mental health and wellness support services  
+              </h2>
+              <p class="mt-4 text-lg text-gray-500 animation-element slide-right">
+                Syndi Assess is a university mental health and wellbeing platform that supports student services in
+                creating a healthy and motivating studying environment for their students.
+              </p>
+            </div>
+            <div class="mt-6">
+              <a href="booking.html">
+                <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Book a demo
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+          <div class="pr-2 -ml-50 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+            <img
+              class="w-full rounded-xl ring-1 ring-black ring-opacity-0 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none animation-element slide-left"
+              src="img/New-Ui-Mockups.png" alt="Customer profile user interface">
+          </div>
+        </div>
+      </div>
+      <div class="lg:text-center">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+    <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+      <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404"
+        height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+        <defs>
+          <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)" />
+      </svg>
+      <div class="lg:text-center" id="features">
+        <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Features</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          An easier way to assess and signpost students
+        </p>
+      </div>
+      <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center animation-element slide-left">
+        <div class="relative">
+          <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+            Features
+          </h3>
+          <!-- <p class="mt-3 text-lg text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere. Totam, velit.
+        </p> -->
+          <dl class="mt-10 space-y-10">
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" fill-rule="evenodd"
+                    clip-rule="evenodd">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19.365 17.737c-1.764.844-2.1 1.062-3.359 1.062-1.619 0-2.84-1.019-4.734-1.171.411-.728.797-1.588.996-2.627h3.732v-5h-4.266c-1.082-2.112-1.271-5.133 1.1-5.133 1.742 0 2.182 1.751 2.49 2.751l5.127-.751c-.789-4.906-3.596-6.868-7.482-6.868-5.059 0-8.852 3.87-7.68 10h-2.289v5h3.169c-.056 2.332-1.398 3.058-3.169 4.546l2.562 4.454c1.18-.705 2.414-1.125 4.172-1.125 2.059 0 3.979 1.125 6.771 1.125 2.154-.014 3.359-.768 4.494-1.415l-1.634-4.848zm-6.254 3.721c-2.062-.557-4.756-.98-6.668-.062l-.848-1.427c2.681-2.422 2.856-4.728 2.471-6.969h-3.066v-1h2.863c-.611-2.665-1.614-5.247.34-7.829 1.047-1.384 2.828-2.211 4.766-2.211.709 0 4.021.169 5.098 3.234l-1.405.206c-.768-1.563-2.199-2.533-3.828-2.533-1.295 0-2.439.632-3.141 1.734-1.781 2.797-.068 4.868.531 7.399h3.776v1h-3.613c.128 1.449-.243 3.077-1.859 5.077l.943 1.771c1.32-.447 2.35-.154 3.545.286 1.574.579 3.275.992 5.166.33l.396 1.159c-1.808.763-3.582.345-5.467-.165z" />
+                  </svg>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Fast and legally secure implementation
+                </p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-500">
+                Set up individualized mental health and wellness surveys in just a few minutes. 100&#37; legally compliant according to GDPR. 
+              </dd>
+            </div>
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                  <!-- Heroicon name: outline/scale -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M16.586 19.414l-2.586 2.586v-8h8l-2.586 2.586 4.586 4.586-2.828 2.828-4.586-4.586zm-13.758-19.414l-2.828 2.828 4.586 4.586-2.586 2.586h8v-8l-2.586 2.586-4.586-4.586zm16.586 7.414l2.586 2.586h-8v-8l2.586 2.586 4.586-4.586 2.828 2.828-4.586 4.586zm-19.414 13.758l2.828 2.828 4.586-4.586 2.586 2.586v-8h-8l2.586 2.586-4.586 4.586z" />
+                  </svg>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Effective changes, noticeable for everyone</p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-500">
+                Recognize mental wellbeing deterioration and stress early on and avoid illness-related absences in your teams through personalised support signposting.
+              </dd>
+            </div>
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                  <!-- Heroicon name: outline/lightning-bolt -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  Saves money and motivates employees
+                </p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-500">
+                Reduces staff turnover and sick leave costs - increases employee loyalty and motivation. Admin dashboard analytics allows for real-time anonymised population health awareness.
+              </dd>
+            </div>
+          </dl>
+          <div class="text-center mt-12">
+            <a href="booking.html">
+              <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Book a demo
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="mt-10 -mx-4 relative lg:mt-0 animation-element slide-right" aria-hidden="true">
+          <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404"
+            fill="none" viewBox="0 0 784 404">
+            <defs>
+              <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+          </svg>
+          <img class="relative mx-auto" width="280" src="img/Recc.png" alt="">
+        </div>
+    
+      </div>
+      <svg class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12" width="404" height="784"
+        fill="none" viewBox="0 0 404 784" aria-hidden="true">
+        <defs>
+          <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="784" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
+      </svg>
+
+      <div class="relative mt-12 sm:mt-16 lg:mt-24 animation-element slide-right">
+        <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div class="lg:col-start-2">
+            <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+              Benefits
+            </h3>
+            <!-- <p class="mt-3 text-lg text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus, cum deleniti sunt in labore nihil quod quibusdam expedita nemo.
+          </p> -->
+            <dl class="mt-10 space-y-10">
+              <div class="relative">
+                <dt>
+                  <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                    <!-- Heroicon name: outline/annotation -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" fill-rule="evenodd"
+                      clip-rule="evenodd">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M22 24h-17c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h17v24zm-2-4h-14.505c-1.375 0-1.375 2 0 2h14.505v-2zm0-18h-3v9l-2-1.547-2 1.547v-9h-8v16h15v-16z" />
+                    </svg>
+                  </div>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Implementing a white-labelled platform
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-16 text-base text-gray-500">
+                 You pick from a range of validated mental health and wellbeing assessment questionnaires, choose what existing resources and support will be pre-loaded into the platform and we will customise the platform for you. 
+                </dd>
+              </div>
+              <div class="relative">
+                <dt>
+                  <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                    <!-- Heroicon name: outline/mail -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">App and admin analytics access</p>
+                </dt>
+                <dd class="mt-2 ml-16 text-base text-gray-500">
+                  Students receive access to Syndi’s app, available on both Android and iOS and administrators receive access to an analytics dashboard that provides an overview of assessment responses and resource utilisation. 
+                 </dd>
+              </div>
+              <div class="relative">
+                <dt>
+                  <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                    <!-- Heroicon name: outline/mail -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" fill-rule="evenodd"
+                      clip-rule="evenodd">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.222 18.917c5.666-5.905-.629-10.828-5.011-7.706l1.789 1.789h-6v-6l1.832 1.832c7.846-6.07 16.212 4.479 7.39 10.085z" />
+                    </svg>
+                  </div>
+                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Assessment and navigation to support</p>
+                </dt>
+                <dd class="mt-2 ml-16 text-base text-gray-500">
+                  Students are prompted via SMS to complete weekly, bi-weekly or monthly assessments within the app. Students build awareness of their mental wellbeing through their own secure dashboard. Personalised signposting to support resources are suggested based on each student’s needs and engagement preferences. 
+                </dd>
+                </div>
+            </dl>
+          </div>
+          <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+            <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404"
+              fill="none" viewBox="0 0 784 404" aria-hidden="true">
+              <defs>
+                <pattern id="e80155a9-dfde-425a-b5ea-1f6fadd20131" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
+            </svg>
+            <img class="relative mx-auto" width="550" src="img/Commercial_dashboard.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+      <span class="block">Ready to dive in?</span>
+      <span class="block text-green-600">Start your free trial today.</span>
+    </h2>
+    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="inline-flex rounded-md shadow">
+        <a href="booking.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-white hover:text-green-600">
+          Book a demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+      <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+        Our Partners
+      </p>
+      <!-- <h2 class="text-3xl font-extrabold text-white">
+      The world's most innovative companies use Workflow
+    </h2> -->
+      <div class="flow-root mt-8 lg:mt-10">
+        <div class="-mt-4 -ml-8 flex flex-wrap justify-between lg:-ml-4">
+          <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+            <img class="h-14" src="img/lsbu.png" alt="LSBU">
+          </div>
+          <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+            <img class="h-14" src="img/falmouth-uni.png" alt="falmouth">
+          </div>
+          <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+            <img class="h-14" src="img/cornwall.png" alt="StaticKit">
+          </div>
+          <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+            <img class="h-14" src="img/sheffield-uni.png" alt="Transistor">
+          </div>
+          <!-- <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+          <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-green-300.svg" alt="Workcation">
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="bg-green-600">
+    <div class="pt-12 sm:pt-16 lg:pt-24">
+      <div id="pricing" class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
+          <h2 class="text-lg leading-6 font-semibold text-white uppercase tracking-wider">
+            Pricing
+          </h2>
+          <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+            Flexible, Affordable Platform Access and Customisation Pricing 
+          </p>
+          <p class="text-xl text-white">
+            For a limited time only, test out Syndi on a free 30-day trial
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
+      <div class="relative">
+        <div class="absolute inset-0 h-3/4 bg-green-600"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                <div>
+                  <h3
+                    class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600"
+                    id="tier-standard">
+                    30-Day Trial
+                  </h3>
+                </div>
+                <div class="mt-8 mb-14 flex items-baseline text-6xl font-extrabold">
+                  Free
+                  <!-- <span class="ml-1 text-2xl font-medium text-gray-500">
+                  /mo
+                </span> -->
+                </div>
+                <!-- <p class="mt-5 text-lg text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p> -->
+              </div>
+              <div class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
+                <ul class="space-y-4">
+                  <!-- <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Up to 200 students
+                    </p>
+                  </li> -->
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Bi-weekly clinical assessment delivery and collection 
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      University analytics dashboard access
+                    </p>
+                  </li>
+
+                  <!-- <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Itaque cupiditate adipisci quibusdam
+                    </p>
+                  </li> -->
+                </ul>
+                <!-- <div class="rounded-md shadow">
+                <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900" aria-describedby="tier-standard">
+                  Get started
+                </a>
+              </div> -->
+              </div>
+            </div>
+
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                <div>
+                  <h3
+                    class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600"
+                    id="tier-standard">
+                    Annual License 
+                  </h3>
+                </div>
+                <div class="mt-4">
+                  <span class="ml-1  text-2xl font-medium text-gray-500">
+                    Based on
+                  </span>
+                </div>
+                <div class="mt-2 flex items-baseline text-6xl font-extrabold">
+                 £0.04 - £0.08 
+                </div>
+                <div>
+                  <span class="ml-1 text-2xl font-medium text-gray-500">
+                    per student per month
+                  </span>
+                </div>
+                <!-- <p class="mt-5 text-lg text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p> -->
+              </div>
+              <div class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Full white-labelled platform access
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Unlimited student app access
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Admin access to analytics dashboard 
+                    </p>
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Automated monthly or quarterly reports
+                  </li>
+
+                  <li class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <!-- Heroicon name: outline/check -->
+                      <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="ml-3 text-base text-gray-700">
+                      Multi-language capabilities
+                    </p>
+                  </li>
+                </ul>
+                <!-- <div class="rounded-md shadow">
+                <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900" aria-describedby="tier-standard">
+                  Get started
+                </a>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
+        <div class="max-w-md mx-auto lg:max-w-5xl">
+          <div class="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
+            <div class="flex-1">
+              <div class="text-center">
+                <a href="booking.html">
+                  <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-white hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Book a demo
+                  </button>
+                </a>
+              </div>
+              <h3
+              class="mt-4 inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-white text-gray-800">
+              Early Adopter Offer
+            </h3>
+              <div class="mt-4 text-lg text-gray-600">Get full access to all of standard license features for higher education institution with less than 3000 students <span
+                  class="font-semibold text-gray-900">£100/mo</span>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8 ">
+      <div
+        class="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-16 md:pl-0 md:pr-10 lg:pr-16 animation-element slide-left">
+        <div class="md:flex-shrink-0">
+          <img class="h-20" src="img/uwl-logo.jpg" alt="uwl-logo">
+        </div>
+        <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
+          <div class="relative text-lg font-medium text-gray-900 md:flex-grow">
+            <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-green-600"
+              fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+              <path
+                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+            </svg>
+            <p class="relative pt-8">
+              Syndi is really a great tool for myself to use to keep track of my mental health. Really easy and simple to use. I also like the apps they recommend, didn't know these apps are out there! 
+            </p>
+          </div>
+          <footer class="mt-8">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
+                <img class="h-12 w-12 rounded-full" src="img/alice.jpeg" alt="">
+              </div>
+              <div class="ml-4">
+                <div class="text-base font-medium text-gray-900">Alice</div>
+                <div class="text-base font-medium text-green-600">Third Year Psychology Student</div>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+      <div
+        class="py-12 px-4 border-t-2 sm:px-6 md:py-16 md:pr-0 md:pl-10 md:border-t-0 md:border-l lg:pl-16 animation-element slide-right">
+        <div class="md:flex-shrink-0 pt-6">
+          <img class="h-12" src="img/newcastle-uni.png" alt="Workcation">
+        </div>
+        <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
+          <div class="relative text-lg font-medium text-gray-900 md:flex-grow">
+            <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-green-600"
+              fill="currentColor" viewBox="0 0 32 32">
+              <path
+                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+            </svg>
+            <p class="relative pt-8">
+              Syndi's a fantastic app to help my find other resources whilst waiting for my university counselling services. Really great selections of free apps for students.
+            </p>
+          </div>
+          <footer class="mt-8">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
+                <img class="h-12 w-12 rounded-full"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixqx=7zgzzI1EIu&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="">
+              </div>
+              <div class="ml-4">
+                <div class="text-base font-medium text-gray-900">Joseph</div>
+                <div class="text-base font-medium text-green-600">Second Year Physics Student</div>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section>
+  <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider p-12">
+    Supported By
+  </p>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        <div class="flex-1 flex flex-col p-8">
+          <img class="max-h-20 mx-auto bg-black" src="img/whatif.jpeg" alt="WhatIf">
+          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          </dl>
+        </div>
+      </li>
+      <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        <div class="flex-1 flex flex-col p-8">
+          <img class="max-h-16 mx-auto bg-black" src="img/royal-academy.png" alt="">
+          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          </dl>
+        </div>
+      </li>
+      <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        <div class="flex-1 flex flex-col p-8">
+          <img class="max-h-20 mx-auto bg-black" src="img/simdh-partner.png" alt="simdh-partner">
+          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          </dl>
+        </div>
+      </li>
+      <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        <div class="flex-1 flex flex-col p-8">
+          <img class="max-h-16 mx-auto bg-black" src="img/ef.png" alt="ef">
+          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          </dl>
+        </div>
+      </li>
+      <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        <div class="flex-1 flex flex-col p-8">
+          <img class="max-h-20 mx-auto bg-black" src="img/p4.jpg" alt="p4">
+          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          </dl>
+        </div>
+      </li>
+      <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        <div class="flex-1 flex flex-col p-8">
+          <img class="max-h-20 mx-auto bg-black" src="img/digitalGrid.png" alt="digitalGrid">
+          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          </dl>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+      <span class="block">Ready to dive in?</span>
+      <span class="block">Start your free trial today.</span>
+    </h2>
+    <div class="mt-8 flex justify-center">
+      <div class="inline-flex rounded-md shadow">
+        <a href="booking.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-white hover:text-green-600">
+          Book a demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+  <footer class="bg-green-600">
+    <div class="flex items-center justify-center w-full md:w-auto pt-8">
+      <a href="home.html">
+        <span class="sr-only">Syndi</span>
+        <img class="h-8 w-auto sm:h-10" src="img/SyndiWhite.png" alt="">
+      </a>
+    </div>
+    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+        <div class="px-5 py-2">
+          <a href="privacy.html" class="text-base text-white hover:text-gray-200">
+            Privacy
+          </a>
+        </div>
+      </nav>
+      <div class="mt-8 flex justify-center space-x-6">
+        <a href="https://www.facebook.com/SyndiHealth" target="_blank" class="text-white hover:text-gray-200">
+          <span class="sr-only">Facebook</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/syndihealth" target="_blank" class="text-white hover:text-gray-200">
+          <span class="sr-only">Instagram</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="https://twitter.com/SyndiHealth" target="_blank" class="text-white hover:text-gray-200">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/syndihealth/" target="_blank"
+          class="text-white hover:text-gray-200">
+          <span class="sr-only">LinkedIn</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+      <p class="mt-8 text-center text-base text-white">
+        &copy; 2021 Syndi LTD. All rights reserved. Limited company registered in England and Wales No.12988822
+      </p>
+    </div>
+  </footer>
+</section>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID');
+
+  var $animation_elements = $('.animation-element');
+  var $window = $(window);
+
+  function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($animation_elements, function () {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = (element_top_position + element_height);
+
+      //check to see if this current container is within viewport
+      if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+        $element.addClass('in-view');
+      } else {
+        $element.removeClass('in-view');
+      }
+    });
+  }
+
+  $window.on('scroll resize', check_if_in_view);
+  $window.trigger('scroll', check_if_in_view);
+  // Navbar Dropdown Mobile Menu 
+
+  document.getElementById("main-menu").addEventListener("click", myFunction);
+
+  function myFunction() {
+    if (dropdown.classList.contains('hidden')) {
+      dropdown.classList.remove('hidden');
+    } else {
+      dropdown.classList.add('hidden');
+    }
+  }
+
+  document.getElementById("closenav").addEventListener("click", myFunctionClose);
+
+  function myFunctionClose() {
+
+    dropdown.classList.add('hidden');
+
+  }
+
+</script>
+
+</body>
+
+</html>
