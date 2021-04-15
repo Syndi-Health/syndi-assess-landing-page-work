@@ -10,7 +10,15 @@ body {
  
   @media (max-width: 375px) {
     .four-boxes {
-      padding-bottom: 2rem;
+      padding-bottom: 2rem;  
+    }
+
+    .price-text {
+      font-size: 2.75rem;
+    }
+
+    .screens img {
+      width: 90% !important;
     }
   }
 
@@ -25,5 +33,17 @@ body {
     .homepic {
       display: flex;
       padding-top: 2rem;
+    }
+    
+    .video {
+      margin-top: 3rem;
+    }
+
+    .screens {
+      text-align: -webkit-center;
+    }
+
+    .screens img {
+      width: 70%;
     }
   }
