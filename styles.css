@@ -8,14 +8,7 @@ body {
   padding-bottom: 2.8rem;
 }
  
-  
-
-
   @media (max-width: 375px) {
-    .video {
-      display: none;
-    }
-
     .four-boxes {
       padding-bottom: 2rem;
     }
@@ -23,15 +16,14 @@ body {
 
   @media (max-width: 480px) {
     .video {
-      display: none;
+      display: flex;
     }
 
   }
 
   @media (max-width: 1024px) {
     .homepic {
-      display: none;
+      display: flex;
+      padding-top: 2rem;
     }
   }
-
-  
