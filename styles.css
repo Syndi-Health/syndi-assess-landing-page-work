@@ -13,6 +13,14 @@ body {
       padding-bottom: 2rem;  
     }
 
+    .homepic {
+      justify-content: center;
+    }
+
+    .homepic img {
+      height: 150px;
+    }
+
     .price-text {
       font-size: 2.75rem;
     }
@@ -21,6 +29,19 @@ body {
       width: 90% !important;
     }
   }
+
+  @media (max-width: 428px) {
+
+    .homepic {
+      justify-content: center;
+    }
+
+    .homepic img {
+      height: 200px;
+    }
+
+  }
+
 
   @media (max-width: 480px) {
     .video {
