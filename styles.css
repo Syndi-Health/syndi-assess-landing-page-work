@@ -50,6 +50,12 @@ body {
 
   }
 
+  @media (max-width: 768px) {
+    .four-cols {
+      font-size: 1.15rem;
+    }
+  }
+
   @media (max-width: 1024px) {
     .homepic {
       display: flex;
