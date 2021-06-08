@@ -1,5 +1,3 @@
-require("typeface-poppins");
-
 module.exports = {
   mode: 'jit',
   purge: ["index.html"],
