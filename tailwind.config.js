@@ -4,10 +4,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      green: {
-        500: '#5FCD81',
-        600: '#5FCD81'
-      }
+      'text-green': '#5FCD81',
+      'bg-green': '#5FCD81'
     },
     fontFamily: {
      'display': ['Poppins'],
