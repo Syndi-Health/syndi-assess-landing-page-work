@@ -3,10 +3,7 @@ module.exports = {
   purge: ["index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      'text-green': '#5FCD81',
-      'bg-green': '#5FCD81'
-    },
+    extend: {},
     fontFamily: {
      'display': ['Poppins'],
      'body': ['Poppins'],
